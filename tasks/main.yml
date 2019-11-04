@@ -3,4 +3,5 @@
 - name: Set hostname
   hostname:
     name: "{{ inventory_hostname }}"
-  notify: os_restart
+  notify: os_reboot
+  
