@@ -1,6 +1,6 @@
 # Ansible role: Hostname
 
-[![Build Status](https://travis-ci.org/kamikazestar/ansible-role-ntp.svg?branch=master)](https://travis-ci.org/kamikazestar/ansible-role-ntp)
+[![Build Status](https://travis-ci.org/kamikazestar/ansible-role-hostname.svg?branch=master)](https://travis-ci.org/kamikazestar/ansible-role-hostname)
 
 This role will set hostname acording to the inventory hostname.
 
