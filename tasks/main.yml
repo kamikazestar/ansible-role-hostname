@@ -1,0 +1,6 @@
+---
+# tasks file for ansible-role-hostname
+- name: Set hostname
+  hostname:
+    name: "{{ inventory_hostname }}"
+  notify: os_restart

@@ -1,0 +1,31 @@
+---
+galaxy_info:
+  author: Marcin Slabonski
+  description: Set the hostname
+  company: None
+
+  license: "MIT"
+
+  min_ansible_version: 2.4
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - bionic
+        - xenial
+    - name: Debian
+      versions:
+        - buster
+        - stretch
+    - name: EL
+      versions:
+        - 8
+        - 7
+    - name: Fedora
+      versions:
+        - 31
+        - 30
+
+  galaxy_tags: []
+
+dependencies: []
