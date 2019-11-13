@@ -1,32 +1,6 @@
 ---
 # tasks file for ansible-role-hostname
-- name: Ensure that dbus is installed
-  apt:
-    name: dbus
-    state: present
-  when: ansible_os_family == 'Debian'
-
-- name: Set hostname
-  hostname:
-    name: "{{ inventory_hostname }}"
-  notify: os_reboot
-
-- name: Modify /etc/hosts file
-  template:
-    src: hosts_debian.j2
-    dest: /etc/hosts
-    owner: root
-    group: root
-    mode: 0644
-  when: ansible_os_family == 'Debian'
-  notify: os_reboot
-
-- name: Modify /etc/hosts file
-  template:
-    src: hosts_redhat.j2
-    dest: /etc/hosts
-    owner: root
-    group: root
-    mode: 0644
-  when: ansible_os_family == 'RedHat'
-  notify: os_reboot
+- include: Debian.yml
+  when: ansible_os_family == "Debian"
+- include: RedHat.yml
+  when: ansible_os_family == "RedHat"

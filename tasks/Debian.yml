@@ -1,0 +1,15 @@
+---
+- name: Set hostname
+  hostname:
+    name: "{{ inventory_hostname }}"
+    use: debian
+  notify: os_reboot
+
+- name: Modify /etc/hosts file
+  template:
+    src: hosts_debian.j2
+    dest: /etc/hosts
+    owner: root
+    group: root
+    mode: 0644
+  notify: os_reboot
