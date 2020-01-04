@@ -2,7 +2,7 @@
 - name: Set hostname
   hostname:
     name: "{{ inventory_hostname }}"
-    use: generic
+    use: systemd
   notify: os_reboot
 
 - name: Modify /etc/hosts file
